@@ -47,6 +47,7 @@ class NonNullIteratorTest {
         assertThat(iterator.hasNext()).isFalse();
     }
 
+
     @Test
     void allNumbersAreNotNull() {
         iterator = new NonNullIterator(new Integer[] {2, 4, 6, 8});
