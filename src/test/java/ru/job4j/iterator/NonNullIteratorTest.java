@@ -41,6 +41,7 @@ class NonNullIteratorTest {
         assertThat(iterator.hasNext()).isFalse();
     }
 
+
     @Test
     void  shouldReturnFalseIfNoAnyElements() {
         iterator = new NonNullIterator(new Integer[]{});
