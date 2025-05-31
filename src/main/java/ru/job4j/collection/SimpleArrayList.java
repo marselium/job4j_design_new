@@ -57,6 +57,7 @@ public class SimpleArrayList<T> implements SimpleList<T> {
             container = (T[]) new Object[2];
         }
     }
+
     @Override
     public Iterator<T> iterator() {
         return new Iterator<T>() {

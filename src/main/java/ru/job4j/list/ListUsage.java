@@ -10,8 +10,8 @@ public class ListUsage {
         result.add("one");
         result.add("two");
         result.add("three");
-        result.add(1,"four");
-        List<String> list =List.of("Five", "Six");
+        result.add(1, "four");
+        List<String> list =L  ist.of("Five", "Six");
         result.addAll(list);
        /*for (int i = 0; i < result.size(); i++) {
             System.out.println(result.get(i));
