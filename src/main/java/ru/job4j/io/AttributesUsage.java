@@ -19,5 +19,4 @@ public class AttributesUsage {
         System.out.println("Время последнего доступа: " + attributes.lastAccessTime());
         System.out.println("Время последнего изменения: " + attributes.lastModifiedTime());
     }
-
 }
