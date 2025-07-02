@@ -12,9 +12,9 @@ public class EvenNumberFile {
                 builder.append((char) rsl);
             }
             String[] lines = builder.toString().split(System.lineSeparator());
-            for (int i = 0; i < lines.length; i++) {
-                if (Integer.parseInt(lines[i]) % 2 == 0) {
-                    System.out.println(lines[i]);
+            for (String line: lines) {
+                if (Integer.parseInt(line) % 2 == 0) {
+                    System.out.println(line);
                 }
             }
         } catch (IOException e) {
