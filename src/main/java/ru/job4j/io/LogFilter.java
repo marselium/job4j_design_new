@@ -30,7 +30,9 @@ public class LogFilter {
     public void saveTo(String out) {
         var data = filter();
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(out))){
-           // writer.write();
+            for (String dat:data) {
+                writer.write(dat + System.lineSeparator());
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -39,5 +41,6 @@ public class LogFilter {
     public static void main(String[] args) {
         LogFilter logFilter = new LogFilter("data/log.txt");
         logFilter.filter().forEach(System.out::println);
+        logFilter.saveTo("data/out.txt");
     }
 }
