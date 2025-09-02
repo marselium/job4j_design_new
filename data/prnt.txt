@@ -1,0 +1,2 @@
+PrintStream to FilterOutputStream
+new line using write .getBytes
