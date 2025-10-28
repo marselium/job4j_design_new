@@ -74,7 +74,7 @@ public class Config {
     public static void main(String[] args) {
         Config config = new Config("data/app.properties");
         config.load();
-        System.out.println("Driver: " + config.value("hibernate.connection.driver_class"));
-        System.out.println("URL: " + config.value("hibernate.connection.url"));
+        System.out.println("Driver: " + config.value("jdbc.driver"));
+        System.out.println("URL: " + config.value("jdbc.url"));
     }
 }
