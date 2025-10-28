@@ -9,7 +9,7 @@ public class StatementDemo {
         Class.forName("org.postgresql.Driver");
         String url = "jdbc:postgresql://localhost:5432/idea_db";
         String login = "postgres";
-        String password = "password";
+        String password = "SQWERt!!!11";
         return DriverManager.getConnection(url, login, password);
     }
 
