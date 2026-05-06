@@ -1,4 +1,4 @@
-package ru.job4j.spammer;
+package ru.job4j.jdbc;
 
 import ru.job4j.io.Config;
 
