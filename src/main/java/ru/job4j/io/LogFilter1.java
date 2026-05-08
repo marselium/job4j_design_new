@@ -14,8 +14,8 @@ public class LogFilter1 {
 
     public List<String> filter() {
         try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
-           return reader.lines().filter(s -> s.indexOf(" 404 ") >= s.length() - 10
-           ).collect(Collectors.toList());
+            return reader.lines().filter(s -> s.indexOf(" 404 ") >= s.length() - 10
+            ).collect(Collectors.toList());
         } catch (IOException e) {
             e.printStackTrace();
             return List.of();
@@ -24,7 +24,7 @@ public class LogFilter1 {
 
     public void saveTo(String out) {
         var data = filter();
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(out))){
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(out))) {
             for (int i = 0; i < data.size(); i++) {
                 writer.write(data.get(i));
                 writer.write(System.lineSeparator());
