@@ -16,7 +16,7 @@ public class LogFilter1 {
 
     public List<String> filter() {
         try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
-           return reader.lines().filter(s -> s.indexOf(" 404 ") >= 1
+           return reader.lines().filter(s -> s.indexOf(" 404 ") >= s.length() - 10
            ).collect(Collectors.toList());
         } catch (IOException e) {
             e.printStackTrace();
