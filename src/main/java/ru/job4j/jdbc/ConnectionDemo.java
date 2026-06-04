@@ -12,10 +12,10 @@ public class ConnectionDemo {
     public static void main(String[] args) throws SQLException, IOException, ClassNotFoundException {
         Config config = new Config("data/app.properties");
         config.load();
-        Class.forName(config.value("hibernate.connection.driver_class"));
-        String url = config.value("hibernate.connection.url");
-        String login = config.value("hibernate.connection.username");
-        String password = config.value("hibernate.connection.password");
+        Class.forName(config.value("jdbc.driver_class"));
+        String url = config.value("jdbc.url");
+        String login = config.value("jdbc.username");
+        String password = config.value("jdbc.password");
         try (Connection connection = DriverManager.getConnection(url, login, password)) {
             DatabaseMetaData metaData = connection.getMetaData();
             System.out.println(metaData.getUserName());
